@@ -1,0 +1,17 @@
+from turtle import Turtle
+from turtle import Screen
+
+tur_obj=Turtle()
+turscreen_obj=Screen()
+
+tur_obj.shape("turtle")
+tur_obj.color("red")
+def turn():
+    tur_obj.forward(100)
+    tur_obj.left(90)
+turn()
+turn()
+turn()
+tur_obj.forward(100)
+
+turscreen_obj.exitonclick()
