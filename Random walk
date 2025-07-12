@@ -1,0 +1,23 @@
+import turtle
+import random
+
+turtle_colors = [
+     "black", "red", "green", "blue",
+     "magenta", "orange", "purple",
+    "brown",  "gray", "lightblue",
+      "maroon", "navy", "violet", "turquoise"
+]
+directions = [0,90,180,270]
+t = turtle.Turtle()
+t.pendown()
+t.pensize(10)
+for i in range(200):
+    t.color(random.choice(turtle_colors))
+    t.forward(30)
+    t.setheading(random.choice(directions))
+    
+
+turtle.done()
+
+
+
