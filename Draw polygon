@@ -1,0 +1,23 @@
+import turtle
+import random
+
+turtle_colors = [
+     "black", "red", "green", "blue",
+     "magenta", "orange", "purple",
+    "brown",  "gray", "lightblue", "lightgreen",
+     "silver", "maroon", "navy", "violet", "turquoise"
+]
+t = turtle.Turtle()
+def shape(num):
+    t.color(random.choice(turtle_colors))
+    for i in range(num):
+        t.forward(100)
+        t.right((360/num))
+
+t.pendown()
+for i in range(3,11):
+    shape(i)
+turtle.done()
+
+
+
