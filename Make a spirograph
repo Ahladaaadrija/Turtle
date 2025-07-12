@@ -7,15 +7,15 @@ turtle_colors = [
     "brown",  "gray", "lightblue",
       "maroon", "navy", "violet", "turquoise"
 ]
-
 t = turtle.Turtle()
+t.speed("fastest")
 t.pendown()
-t.pensize(5)
-for i in range(18):
-    if i==0 or i==4 or i==8 or i==12 or i==16:
+t.pensize(3)
+for i in range(36):
+    if i==0 or i==6 or i==12 or i==18 or i==24 or i==30 or i==36:
         t.color(random.choice(turtle_colors))
     t.circle(100)
-    t.right(20)
+    t.right(10)
 
 turtle.done()
 
