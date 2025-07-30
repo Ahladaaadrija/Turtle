@@ -1,0 +1,38 @@
+from turtle import Turtle
+
+class Score(Turtle):
+    def __init__(self):
+        super().__init__()
+        self.color("white")
+        self.penup()
+
+        self.hideturtle()
+        self.scoreright = 0
+        self.scoreleft = 0
+        self.hideturtle()
+        self.update_score()
+
+    def update_score(self):
+        self.clear()
+        self.goto(100,260)
+        self.write(f"{self.scoreright}", align="center", font=("Courier", 20, "bold"))
+        self.goto(-100, 260)
+        self.write(f"Score: {self.scoreleft}", align="center", font=("Courier", 20, "bold"))
+
+    def game_over(self):
+        self.goto(0, 0)
+        self.write("GAME OVER", align="center", font=("Courier", 20, "bold"))
+
+    def increase_left(self):
+        self.scoreleft += 1
+        self.clear()
+        self.update_score()
+
+    def increase_right(self):
+        self.scoreright += 1
+        self.clear()
+        self.update_score()
+
+
+
+
